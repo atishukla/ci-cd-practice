@@ -1,0 +1,13 @@
+---
+
+- name: Configurations to "ci" host
+  hosts: ci  
+  become: yes
+
+  vars:
+    docker_group: docker
+    remote_user: ubuntu
+    docker_compose_version: 1.18.0
+
+  roles:
+    - setup
