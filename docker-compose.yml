@@ -31,7 +31,6 @@ services:
       - jenkins-data:/var/lib/jenkins/
     depends_on:
       - nexus
-      - sonar
     environment:
       - NEXUS_PORT=8081
       - SONAR_PORT=9000
