@@ -22,6 +22,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
   nexus:
     build: ./nexus
+    command: --prefix="/nexus"
     restart: always
     ports:
       - "18081:8081"
@@ -33,6 +34,7 @@ services:
       - nginx
   jenkins:
     build: ./jenkins
+    command: --prefix="/jenkins"
     restart: always
     ports:
       - "18080:8080"
